@@ -1,0 +1,247 @@
+@media only screen and (max-width: 768px) {
+
+
+
+    .navbar-toggler {
+        padding: 0;
+        z-index: 6;
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .iconone, .icontwo, .toggletwoicon, .togglefouricon {
+        transition: 0.4s ease all;
+    }
+
+    .icontwo, .iconfour {
+        margin-left: 6px;
+    }
+
+    .toggletwoicon.active {
+        background: red;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+    }
+
+    .iconone.active {
+        width: 1px;
+        height: 15px;
+        transform: rotate(88deg);
+        border-radius: none;
+        background: white;
+    }
+
+    .icontwo.active {
+        width: 1px;
+        height: 15px;
+        transform: rotate(358deg);
+        border-radius: none;
+        margin-left: -1px !important;
+        background: white;
+    }
+
+    .togglefouricon.active {
+        display: none;
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navul {
+        display: block;
+        margin-top: 10%;
+        padding-left: 0;
+    }
+
+    .navul li {
+        border-bottom: 1px solid grey;
+        line-height: 3rem;
+        padding-left: 0 !important;
+    }
+
+    .getin {
+        left: 6%;
+        bottom: 30%;
+        width: 120px;
+        padding: 0;
+    }
+
+    .copywright {
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    #pre-loader video {
+        width: auto !important;
+    }
+
+    .service-cards {
+        margin-top: 40px;
+    }
+
+    .glitch {
+        font-size: 12px;
+    }
+
+    .landingheading, .aboutheading {
+        font-size: 23px;
+    }
+    .landing-list {
+        right: 15%;
+        bottom: 30%;
+    }
+    .navlinkbtn {
+        padding-left: 0 !important;
+    }
+
+    .navbar {
+        padding-right: 5%;
+        padding-left: 0;
+    }
+
+    .navbar-brand {
+        width: 20%;
+    }
+    .aboutheading{
+      display: none;
+    }
+    .aboutheadingmob{
+        display: block;
+        color: white;
+    }
+    .divparent {
+        width: 100%;
+    }
+    .maplocation{
+        display: none;
+    }
+    iframe{
+        height: 40vh;
+    }
+    .moblogbrand {
+        width: 30%;
+    }
+
+    .moblogo {
+        display: block;
+        width: 100%;
+    }
+
+    .mobnavlogo {
+        display: block;
+        margin-top: 14%;
+        opacity: 0.1;
+    }
+
+    .navbar-collapse .nav-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        animation-name: fadeInLeft;
+        border-bottom: 1px solid grey;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -100%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.collapsing .navoverlay {
+        left: -100%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show, .navbar-collapse.show .navoverlay {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed~.navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+
+    .nav-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        animation-name: fadeInLeft;
+        border-bottom: 1px solid grey;
+    }
+
+    .toggletwoicon {
+        height: 13px
+    }
+
+    .iconone, .icontwo, .toggletwoicon, .togglefouricon {
+        transition: 0.4s ease all;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+        background-color: black;
+    }
+
+    .navbar-collapse .nav-link {
+        font-size: 1.5rem;
+        padding-left: 6%;
+    }
+
+    .navbar-collapse .nav-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        animation-name: fadeInLeft;
+        border-bottom: 1px solid grey;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -100%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.collapsing .navoverlay {
+        left: -100%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show, .navbar-collapse.show .navoverlay {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed~.navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+
+
+    .nav-tabs .nav-link {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 15px !important;
+    }
+
+
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scrollbtnp {
+        font-size: 20px;
+    }
+}
