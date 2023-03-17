@@ -1,6 +1,29 @@
 @media only screen and (max-width: 768px) {
 
+    #landingsection {
+        margin-top: 0px;
+    }
 
+    .landingcontent {
+        top: 35%;
+    }
+
+    .aboutcontent {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .mapcontent li {
+        display: inline-block;
+    }
+
+    .aboutpara {
+        margin-left: 5%;
+    }
+
+    .projectbtn {
+        margin-left: 5%;
+    }
 
     .navbar-toggler {
         padding: 0;
@@ -58,6 +81,7 @@
 
     .navbar-toggler {
         border: none;
+        margin-top: 8%;
     }
 
     .navul {
@@ -74,9 +98,41 @@
 
     .getin {
         left: 6%;
-        bottom: 30%;
+        bottom: 45%;
         width: 120px;
-        padding: 0;
+        padding: 5px;
+    }
+
+    .logofooter {
+        width: 20%;
+        margin-bottom: 5%;
+    }
+
+    .footercontent .navbar-brand {
+        margin-left: 0;
+    }
+
+    .logofooter {
+        width: 20%;
+        margin-left: 0;
+        margin-bottom: 5%;
+    }
+
+    .joinbtn {
+        width: 200px;
+        height: 40px
+    }
+
+    .aboutcontent {
+        font-size: 13px;
+    }
+
+    .btn-icon {
+        height: 40px;
+    }
+
+    .landing-list ul li:nth-child(2), .landing-list ul li:nth-child(3) {
+        padding-left: 20px;
     }
 
     .copywright {
@@ -99,10 +155,15 @@
     .landingheading, .aboutheading {
         font-size: 23px;
     }
+
     .landing-list {
         right: 15%;
-        bottom: 30%;
+        bottom: 34%;
     }
+.revolvingcircle {
+bottom: 15%;
+}
+
     .navlinkbtn {
         padding-left: 0 !important;
     }
@@ -113,26 +174,46 @@
     }
 
     .navbar-brand {
-        width: 20%;
+        width: 15%;
+        margin-left: 5%;
+        margin-top: 5%;
     }
-    .aboutheading{
-      display: none;
+
+    .revolutiontext {
+        display: none;
     }
-    .aboutheadingmob{
+
+    .revolutiontextmob {
         display: block;
         color: white;
+        line-height: 0.8;
+        font-family: 'NEUEMACHINAULTRABOLD';
     }
+
+    .ourmission::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    iframe {
+        border-radius: 0.5rem;
+    }
+
     .divparent {
         width: 100%;
     }
-    .maplocation{
+
+    .maplocation {
         display: none;
     }
-    iframe{
+
+    iframe {
         height: 40vh;
     }
+
     .moblogbrand {
-        width: 30%;
+        width: 15%;
+        margin-top: 5%;
     }
 
     .moblogo {

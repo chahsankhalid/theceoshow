@@ -884,6 +884,96 @@ export const Privacy = () => {
           </div>
         </div>
       </div>
+      <section id="TermsandConditions">
+                <div className="container">
+                  <div className="row">
+                    <div className="terms">
+                      <h1>Terms and Conditions</h1>
+                      <br/><br/>
+                      <p>By using our gaming platform, you agree to be bound by the following terms and conditions:</p>
+                      <br/><br/>
+                      <ol>
+                        <li>Eligibility</li>
+                        <p>You must be 18 years or older to use our gaming platform. By using our gaming platform, you represent and warrant that you are at least 18 years of age.</p>
+                        <br/><br/>
+                        <li>User Account</li>
+                        <p>To use our gaming platform, you must create a user account. You are responsible for keeping your account information up-to-date and confidential. You may not use someone else's account without their permission. We reserve the right to terminate your account or refuse service at any time.</p>
+                        <br/><br/>
+                        <li>User Content</li>
+                        <p>You may create and submit content to our gaming platform, including but not limited to in-game items, player-created characters, and chat messages. By submitting content, you grant us a non-exclusive, royalty-free, worldwide, perpetual, and irrevocable right to use, reproduce, modify, adapt, publish, translate, distribute, and display the content.</p>
+                        <br/><br/>
+                        <li>Prohibited Conduct</li>
+                        <p>You may not use our gaming platform for any unlawful purpose or in a manner that infringes on the rights of others. Prohibited conduct includes, but is not limited to, cheating, hacking, harassment, and hate speech.</p>
+                        <br/><br/>
+                        <li>Intellectual Property</li>
+                        <p>Our gaming platform and its contents, including but not limited to text, graphics, logos, images, and software, are owned or licensed by us and protected by applicable copyright and trademark laws. You may not use our intellectual property without our prior written consent.</p>
+                        <br/><br/>
+                        <li>Limitation of Liability</li>
+                        <p>Our gaming platform is provided on an "as is" basis, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We are not liable for any direct, indirect, incidental, special, or consequential damages arising from your use of our gaming platform.</p>
+                        <br/><br/>
+                        <li>Governing Law and Dispute Resolution</li>
+                        <p>These terms and conditions are governed by the laws of [insert governing law]. Any dispute arising out of or related to these terms and conditions will be resolved through binding arbitration in accordance with the rules of governing law to laws of your country of residence</p>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+      </section>
+
+      <section id="copyright">
+                <div className="container">
+                  <div className="row">
+                    <div className="terms">
+                      <h1>Copyright Notice</h1>
+                      <br/><br/>
+                      <p>All content on our gaming platform, including but not limited to text, graphics, logos, images, and software, is the property of The Game Company LLC or its content suppliers and is protected by copyright and other intellectual property laws.</p>
+                      <br/><br/>
+                     <p>You may not use, copy, reproduce, modify, or distribute any of our content without our prior written consent. This includes, but is not limited to, in-game items, player-created characters, and chat messages.</p>
+                     <br/><br/>
+                     <p>You may, however, use our content for personal, non-commercial purposes, such as playing our games or interacting with other users on our gaming platform.</p>
+                     <br/><br/>
+                     <p>If you believe that any of our content infringes on your copyright or other intellectual property rights, please contact us at [Insert contact information]. We will investigate your claim and take appropriate action if necessary.</p>
+                     <br/><br/>
+                     <p>If you have any questions about our copyright notice, please contact us at <br/>
+                     info@thegamecompany.ai</p>
+                    </div>
+                  </div>
+                </div>
+      </section>
+
+      <section id="legalnotice">
+                <div className="container">
+                  <div className="row">
+                    <div className="terms">
+                      <h1>Legal Notice</h1>
+                      <br/><br/>
+                      <p>This legal notice applies to all users of our gaming platform. By using our gaming platform, you agree to be bound by this legal notice. If you do not agree to this legal notice, you should not use our gaming platform.</p>
+                      <br/><br/>
+                      <ol>
+                        <li>Ownership</li>
+                        <p>Our gaming platform, including but not limited to its software, design, graphics, and content, is owned and operated by "The Game Company LLC, a Dubai Registered corporation. All rights are reserved.</p>
+                        <br/><br/>
+                        <li>Copyright and Trademarks</li>
+                        <p>The content on our gaming platform, including but not limited to text, graphics, logos, images, and software, is protected by copyright and trademark laws. You may not use, copy, reproduce, modify, or distribute any of our content without our prior written consent.</p>
+                        <br/><br/>
+                        <li>Disclaimers and Limitation of Liability</li>
+                        <p>Our gaming platform is provided on an "as is" basis, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that our gaming platform will be error-free, uninterrupted, or free from viruses or other harmful components.
+                        <br/>To the maximum extent permitted by law, we are not liable for any direct, indirect, incidental, special, or consequential damages arising from your use of our gaming platform, including but not limited to damages for loss of profits, data, or other intangible losses.</p>
+                        <br/><br/>
+                        <li>Links to Third-Party Websites</li>
+                        <p>Our gaming platform may contain links to third-party websites. We do not endorse or control these websites, and we are not responsible for their content or privacy practices. Your use of third-party websites is at your own risk.</p>
+                        <br/><br/>
+                        <li>Governing Law and Jurisdiction</li>
+                        <p>This legal notice is governed by the laws of Dubai, and any dispute arising out of or related to this legal notice will be resolved by the courts of Dubai.</p>
+                        <br/><br/>
+                        <li>Updates to Legal Notice</li>
+                        <p>We reserve the right to update or modify this legal notice at any time without prior notice. Your continued use of our gaming platform following any such changes constitutes your acceptance of the updated legal notice.</p>
+                        <br/><br/>
+                        <p>If you have any questions about this legal notice, please contact us at info@thegamecompany.ai</p>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+      </section>
     </>
   );
 };

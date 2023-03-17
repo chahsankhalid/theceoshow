@@ -5,9 +5,11 @@ import { BsArrowRight } from "react-icons/bs";
 import Modal from "react-bootstrap/Modal";
 import { ToastContainer, toast } from "react-toastify";
 import { HashLink as Link } from "react-router-hash-link";
+import emailjs from 'emailjs-com';
+import axios from 'axios';
 import $ from "jquery";
 
-const Navcomponent = () => {
+const  Navcomponent = () => {
   const [lgShow, setLgShow] = useState(false);
   const [formState, setFormState] = useState({});
   const changeHandler = (event) => {
@@ -16,24 +18,18 @@ const Navcomponent = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     const config = {
-      SecureToken: "365f23bb-b519-4870-9621-17e3a0f0f1e3",
-      To: "ahsanch1509@gmail.com",
-      From: formState.email,
+      SecureToken: "edb30f93-ab79-41df-85e0-06b84121b181",
+      From: `${formState.email}`,
+      To: "companythegame4@gmail.com",
       Subject: "Email from website",
       // Body : `${(formState.fname).concat(' ', formState.lname)} connected to you over email`,
       Body: {
-        Name: `${formState.fname}<br/>`,
+        Name: `${formState.name}<br/>`,
         Organization: `${formState.organization}<br/>`,
         Email: `${formState.email}<br/>`,
         Subject: `${formState.subject}<br/>`,
         Phone: `${formState.phone}<br/>`,
         Message: `${formState.message}<br/>`,
-        // Service: `${formState.select1}<br/>`,
-        // Budget: `${formState.select2}<br/>`,
-        Client: `${formState.fname.concat(
-          " ",
-          formState.lname
-        )} connected to you from website`,
       },
     };
     if (window.Email) {
@@ -68,20 +64,78 @@ const Navcomponent = () => {
       });
     }
   };
+
+
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+    const data={
+      Name: formState.fname,
+      Organization: formState.organization,
+      Email: formState.email,
+      Subject: formState.subject,
+      Phone: formState.phone,
+      Message: formState.message,
+    }
+
+    emailjs.sendForm('service_36d2l6r','template_u8ggfys',event.target,'8fI-sqXJweUI1s17Y').then(
+      response=>{
+        console.log(response.status)
+        if (response.status === 200) {
+          $('.modal').removeClass('show');
+          $('.modal-backdrop').removeClass('show')
+          toast.success("Email sent successfully", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+
+          axios.post('https://sheet.best/api/sheets/659586f7-fc9d-4be5-9c85-876d03ce86e4',data)
+          .then((response)=>{
+            console.log(response);
+            setFormState('')
+          })
+        } else {
+          toast.error("Incorrect Email", {
+            position: "top-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+
+          // setTimeout(
+          //     navigate('/')
+          // , 3000);
+        }
+      }
+    )
+  }
   const hidenav = () => {
+    $("body").removeClass("active");
     document.body.style.overflow = "visible";
     $(".navbar-collapse").removeClass("show");
     $(".toggletwoicon,.iconone,.icontwo,.togglefouricon").removeClass("active");
+    $('.navbar-toggler').removeClass('collapsed')
   };
 
   useEffect(() => {
-    $(".navbar-toggler").on("click", function () {
-      $("body").toggleClass("active");
-      $(".iconone").toggleClass("active");
-      $(".icontwo").toggleClass("active");
-      $(".toggletwoicon").toggleClass("active");
-      $(".togglefouricon").toggleClass("active");
-    });
+    // $(".navbar-toggler").on("click", function () {
+    //   $("body").toggleClass("active");
+    //   $('.navbar-toggler').toggleClass('collapsed')
+    //   $(".iconone").toggleClass("active");
+    //   $(".icontwo").toggleClass("active");
+    //   $(".toggletwoicon").toggleClass("active");
+    //   $(".togglefouricon").toggleClass("active");
+    // });
   }, []);
   return (
     <>
@@ -162,7 +216,7 @@ const Navcomponent = () => {
                     onClick={hidenav}
                     className="nav-link"
                     smooth={true}
-                    to="#ABOUT-us"
+                    to="#About"
                   >
                     ABOUT
                   </Link>
@@ -174,7 +228,7 @@ const Navcomponent = () => {
                     smooth={true}
                     to="#map"
                   >
-                    Contact us
+                    CONTACT US
                   </Link>
                 </li>
               </ul>
@@ -201,7 +255,7 @@ const Navcomponent = () => {
                 <Modal.Title id="example-modal-sizes-title-lg"></Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <form onSubmit={submitHandler} className="emailform">
+                <form onSubmit={sendEmail} className="emailform">
                   <div className="form-group">
                     <input
                       type="text"
@@ -274,7 +328,7 @@ const Navcomponent = () => {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="submitbtnemail">
+                  <button type="submit" className="submitbtnemail" >
                     <BsArrowRight />
                   </button>
                 </form>
