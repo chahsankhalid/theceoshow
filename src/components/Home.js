@@ -43,6 +43,7 @@ const Home = () => {
                     <Landing />
                     <Services />
                     <About />
+                    <AllProjects />
                     <Aboutmore />
                     {/* <Sliderscroll /> */}
                     {/* <AllProjects />

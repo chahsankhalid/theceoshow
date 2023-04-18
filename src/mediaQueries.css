@@ -325,4 +325,13 @@ bottom: 15%;
     .scrollbtnp {
         font-size: 20px;
     }
+    .projectcard{
+        margin-bottom: 70px;
+    }
+    .service-cards{
+        height: auto;
+    }
+    #ABOUT-us {
+        padding: 10% 2% 10% 2%;
+    }
 }

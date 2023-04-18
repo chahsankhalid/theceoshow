@@ -11,18 +11,18 @@ const Services = () => {
               <Button variant="outline-primary" className="aboutbtn">
                 ABOUT US
               </Button>
-              <h1 className="aboutheading pt-3">Revolutionary </h1>
-              <h1 className="aboutheading">Experience Driven</h1>
-              <h1 className="aboutheading">
-              through our <span className="purpletext">AI driven</span>
-              </h1>
-              <h1 className="aboutheading">cloud based platform</h1>
+              <h1 className="aboutheading pt-3">Revolutionary Experience</h1>
+              <h1 className="aboutheading">Driven through our </h1>
+              <h1 className="aboutheading">Cloud based <span className="purpletext">AI Platform</span></h1>
               <p className="aboutcontent">
-                We provide the ultimate gaming experience driven by users’
-                psychographics and IOA (Interests, Opinions, and Activities)
-                through our powerful fantasy league engine. Our cloud-based Web
+                Our cloud-based Web
                 3.0 platform is driven by AI and covers the global spectrum of
                 devices, games, and gamers ensuring gaming is accessible, engaging and rewarding to everyone.
+                <br />
+                <br />
+                We provide the ultimate gaming experience driven by users’
+                psychographics and IOA (Interests, Opinions, and Activities)
+                through our powerful fantasy league engine.
                 <br />
                 <br />
                 The revolutionary user experience based on our indigenous
@@ -67,7 +67,7 @@ const Services = () => {
                 anywhere, anytime and on any device
               </p>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6" onContextMenu={e => e.preventDefault()}>
             <img
                   src={"./assets/images/controller.png"}
                   className="controller"
@@ -98,20 +98,14 @@ const Services = () => {
                   type="video/mp4"
                 />
               </video> */}
+              <div className="rotatingparent">
                 <img
                   src={"./assets/images/003.png"}
                   className="rotating"
-                  alt="revolve"
+                  alt="revolve" onContextMenu={e => e.preventDefault()}
                 />
-                <model-viewer
-                  alt="cloud computing"
-                  ar
-                  environment-image={"./assets/3d/"}
-                  poster="shared-assets/models/NeilArmstrong.webp"
-                  shadow-intensity="1"
-                  camera-controls
-                  touch-action="pan-y"
-                ></model-viewer>
+                </div>
+               
                 <h1>Cloud Computing</h1>
                 <p>
                   Offering an end to end experience, for the entire gaming
@@ -138,7 +132,7 @@ const Services = () => {
                 <img
                   src={"./assets/images/002.png"}
                   className="rotating"
-                  alt="revolve"
+                  alt="revolve" onContextMenu={e => e.preventDefault()}
                 />
 
                 <h1>Web3</h1>
@@ -168,6 +162,7 @@ const Services = () => {
                   src={"./assets/images/001.png"}
                   className="rotating"
                   alt="revolve"
+                  onContextMenu={e => e.preventDefault()}
                 />
 
                 <h1>Metaverse</h1>

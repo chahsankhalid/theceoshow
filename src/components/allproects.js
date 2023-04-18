@@ -1,60 +1,202 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const AllProjects = () => {
-    useEffect(() => {
-        let tl1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#allimagesparent",
-                start: 'top top',
-                pin: false,
-                end: '+=1000px',
-                pinSpacing: false,
-                scrub: true,
-                endTrigger: "#allimagesparent",
-                markers: false,
-                anticipatePin: 1,
-            },
-        });
-        tl1.add('startallparent')
-        tl1.fromTo(".allvideo1", { xPercent: 0, yPercent: 0 }, { xPercent: -80, yPercent: -30, ease: 'none', duration: 2}, 'startallparent');
-        // tl1.fromTo(".allimg3", { xPercent: 0, yPercent: 0 }, { xPercent: 80, yPercent: 30, ease: 'none', duration: 2}, 'startallparent');
-        tl1.from(".allimg3", {
-            xPercent: 0, yPercent: 0
-        }, 'start')
-
-        tl1.to(".allimg3", {
-            xPercent: 80, yPercent: 30, ease: 'none', duration: 2
-        }, 'startallparent')
-
-        tl1.from(".allimg1", {
-            xPercent: 0, yPercent: 0
-        }, 'start')
-
-        tl1.to(".allimg1", {
-            xPercent: -80, yPercent: 30, ease: 'none', duration: 2
-        }, 'startallparent')
-        tl1.fromTo(".allvideo2", { xPercent: 0, yPercent: 0 }, { xPercent: 80, yPercent: 30, ease: 'none', duration: 2}, 'startallparent');
-    },[])
   return (
     <>
-          <section id="allimagesparent">
-                <div className='allimages'>
-                    <video autoPlay loop muted playsInline className="allvideo1">
-                        <source src={'./assets/videos/bigo.mp4'} type="video/mp4" />
-                    </video>
-                    <img className="allimg2" src={'./assets/images/RMS 2.png'} alt="Card cap" />
-                    <img className="allimg3" src={'./assets/images/Medikay.png'} alt="Card cap" />
-                    <img className="allimg1" src={'./assets/images/Body Shop.png'} alt="Card cap" />
-                    <video autoPlay loop muted playsInline className="allvideo2">
-                        <source src={'./assets/videos/slaughter.mp4'} type="video/mp4" />
-                    </video>
+      <section id="allimagesparent">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon7.png"}
+                    alt="projectcardicon"
+                  />
                 </div>
-            </section>
-    </>
-  )
-}
+                <div className="projectcardcontent">
+                  <p>No Need for</p>
+                  <p>
+                    <span className="redtext">Expensive Hardware</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon1.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Download/ Storage</p>
+                  <p>
+                    <span className="redtext">Not Required</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon4.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>
+                    <span className="redtext"> Supports Android/ Windows</span>
+                  </p>
+                  <p>Mobile, Tablets, TVs, PCs</p>
+                  <p>
+                    <span className="redtext iostext">iOS Coming Soon</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row projectcard4">
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon2.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>
+                    <span className="redtext">High Quality</span>
+                  </p>
+                  <p>Low Latency, High FPS</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon3.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Wide variety of</p>
+                  <p>
+                    <span className="redtext">AAA Game</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon8.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Game Support for </p>
+                  <p>
+                    <span className="redtext">Web2 & Web3</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row projectcard4">
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon11.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Play to</p>
+                  <p>
+                    <span className="redtext">Earn</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <div className="col-md-3">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon5.png"}
+                    alt="projectcardicon"
+                    className="interconnectedicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p><span className="redtext">Interconnected</span> </p>
+                  <p>Multi-role Ecosystem</p>
+                </div>
+              </div>
+            </div> */}
+            {/* <div className="col-md-3">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon6.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p><span className="redtext">AI</span> Based Matching</p>
+                  <p>for <span className="redtext">Gamers</span></p>
+                </div>
+              </div>
+            </div> */}
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon10.png"}
+                    alt="projectcardicon"
+                    className="interconnectedicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Esports, Tournament &</p>
+                  <p>
+                    <span className="redtext">Fantasy Leagues</span>{" "}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-export default AllProjects
+            <div className="col-md-4">
+              <div className="projectcard">
+                <div className="projectcardimg">
+                  <img
+                    src={"./assets/images/icon9.png"}
+                    alt="projectcardicon"
+                  />
+                </div>
+                <div className="projectcardcontent">
+                  <p>Own Digital Assets,</p>
+                  <p>
+                    <span className="redtext">Avatars, Tokens</span> &{" "}
+                    <span className="redtext"> NFT’s</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default AllProjects;

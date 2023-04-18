@@ -318,8 +318,7 @@ body {
 }
 
 .rotating {
-    /* animation: rotating 10s linear infinite; */
-    width: 100%;
+    max-width: 100%;
 }
 
 /* ------------------About-------------- */
@@ -335,6 +334,36 @@ body {
 #Services {
     padding-left: 9%;
     padding-right: 9%;
+}
+.redtext{
+    color: #fa183a;
+}
+.iostext{
+    font-size: 15px !important;
+}
+.projectcard{
+    text-align: center;
+}
+.projectcard p{
+    font-family: 'NEUEMACHINALIGHT';
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.projectcardimg img{
+    object-fit: contain;
+    width: 70px;
+    height: 70px;
+}
+.projectcardcontent{
+    margin-top: 15px
+}
+.projectcard4{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.projectcard5{
+    justify-content: center;
 }
 .aboutbtn {
     background: linear-gradient(to right, #0000ff, #ea485f);
@@ -363,7 +392,7 @@ iframe {
 
 .divparent {
     position: relative;
-    width: 95%;
+    width: 80%;
 }
 
 .maplocation {
@@ -388,6 +417,13 @@ iframe {
     margin: 0;
     line-height: 1;
     font-size: 42px;
+    color: white;
+}
+.aboutheading2{
+    font-family: 'NEUEMACHINAREGULAR';
+    margin: 0;
+    line-height: 1;
+    font-size: 35px;
     color: white;
 }
 
@@ -451,7 +487,6 @@ iframe {
     padding-top: 5%;
     text-align: justify;
     font-size: 15px;
-    width: 90%;
 }
 
 .service-cards {
@@ -462,6 +497,7 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 1rem;
+    min-height: 500px;
 }
 
 .service-cards h1 {
