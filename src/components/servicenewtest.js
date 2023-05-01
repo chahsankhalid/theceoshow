@@ -13,11 +13,13 @@ const Services = () => {
               </Button>
               <h1 className="aboutheading pt-3">Revolutionary Experience</h1>
               <h1 className="aboutheading">Driven through our </h1>
-              <h1 className="aboutheading">Cloud based <span className="purpletext">AI Platform</span></h1>
+              <h1 className="aboutheading">
+                Cloud based <span className="purpletext">AI Platform</span>
+              </h1>
               <p className="aboutcontent">
-                Our cloud-based Web
-                3.0 platform is driven by AI and covers the global spectrum of
-                devices, games, and gamers ensuring gaming is accessible, engaging and rewarding to everyone.
+                Our cloud-based Web 3.0 platform is driven by AI and covers the
+                global spectrum of devices, games, and gamers ensuring gaming is
+                accessible, engaging and rewarding to everyone.
                 <br />
                 <br />
                 We provide the ultimate gaming experience driven by users’
@@ -30,7 +32,7 @@ const Services = () => {
                 latency, and market economics!
               </p>
             </div>
-            <div className="col-md-5" onContextMenu={e => e.preventDefault()}>
+            <div className="col-md-5" onContextMenu={(e) => e.preventDefault()}>
               <video
                 autoPlay
                 loop
@@ -67,12 +69,12 @@ const Services = () => {
                 anywhere, anytime and on any device
               </p>
             </div>
-            <div className="col-md-6" onContextMenu={e => e.preventDefault()}>
-            <img
-                  src={"./assets/images/controller.png"}
-                  className="controller"
-                  alt="controller"
-                />
+            <div className="col-md-6" onContextMenu={(e) => e.preventDefault()}>
+              <img
+                src={"./assets/images/controller.png"}
+                className="controller"
+                alt="controller"
+              />
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@ const Services = () => {
       <section id="Services">
         <div className="container-fluid">
           <div className="row cardsrow" id="cardsrow">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <div className="service-cards">
                 {/* <ul>
                   <li>01/03</li>
@@ -98,14 +100,15 @@ const Services = () => {
                   type="video/mp4"
                 />
               </video> */}
-              <div className="rotatingparent">
-                <img
-                  src={"./assets/images/003.png"}
-                  className="rotating"
-                  alt="revolve" onContextMenu={e => e.preventDefault()}
-                />
+                <div className="serviceimgparent">
+                  <img
+                    src={"./assets/images/003.png"}
+                    className="rotating"
+                    alt="revolve"
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
                 </div>
-               
+
                 <h1>Cloud Computing</h1>
                 <p>
                   Offering an end to end experience, for the entire gaming
@@ -114,36 +117,7 @@ const Services = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="service-cards">
-                {/* <ul>
-                  <li>02/03</li>
-                </ul> */}
-                {/* <video
-                autoPlay
-                loop
-                playsInline
-                muted
-                className="card-video"
-                id="backVideo"
-              >
-                <source src={"./assets/videos/adoption.mp4"} type="video/mp4" />
-              </video> */}
-                <img
-                  src={"./assets/images/002.png"}
-                  className="rotating"
-                  alt="revolve" onContextMenu={e => e.preventDefault()}
-                />
-
-                <h1>Web3</h1>
-                <p>
-                  Leveraging web3 technology to create a vast interconnected
-                  multi-role ecosystem that allows a multitude of gamers to
-                  participate, play and earn.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4">
+            <div className="col-md-3">
               <div className="service-cards">
                 {/* <ul>
                   <li>03/03</li>
@@ -158,13 +132,79 @@ const Services = () => {
               >
                 <source src={"./assets/videos/Comp 5.mp4"} type="video/mp4" />
               </video> */}
+             <div className="serviceimgparent">
+                <img
+                  src={"./assets/images/dabba (1).png"}
+                  className="rotating"
+                  id="aiboximg"
+                  alt="revolve"
+                  onContextMenu={(e) => e.preventDefault()}
+                />
+</div>
+                <h1 className="ai-heading">AI</h1>
+                <p>
+                  At the heart of our our gaming platform is our AI driven
+                  gaming engine which makes intelligent decisions by using real
+                  time data. Thus enhancing user gaming experience while
+                  offering FairPlay and driving engagement on our platform for
+                  game play and tournaments.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="service-cards">
+                {/* <ul>
+                  <li>02/03</li>
+                </ul> */}
+                {/* <video
+                autoPlay
+                loop
+                playsInline
+                muted
+                className="card-video"
+                id="backVideo"
+              >
+                <source src={"./assets/videos/adoption.mp4"} type="video/mp4" />
+              </video> */}
+                <div className="serviceimgparent">
+                  <img
+                    src={"./assets/images/002.png"}
+                    className="rotating"
+                    alt="revolve"
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
+                </div>
+                <h1>Web3</h1>
+                <p>
+                  Leveraging web3 technology to create a vast interconnected
+                  multi-role ecosystem that allows a multitude of gamers to
+                  participate, play and earn.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="service-cards">
+                {/* <ul>
+                  <li>03/03</li>
+                </ul> */}
+                {/* <video
+                autoPlay
+                loop
+                playsInline
+                muted
+                className="card-video"
+                id="backVideo"
+              >
+                <source src={"./assets/videos/Comp 5.mp4"} type="video/mp4" />
+              </video> */}
+              <div className="serviceimgparent">
                 <img
                   src={"./assets/images/001.png"}
                   className="rotating"
                   alt="revolve"
-                  onContextMenu={e => e.preventDefault()}
+                  onContextMenu={(e) => e.preventDefault()}
                 />
-
+</div>
                 <h1>Metaverse</h1>
                 <p>
                   Using blockchain technology to bring Metaverse gaming

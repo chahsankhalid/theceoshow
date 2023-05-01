@@ -318,7 +318,7 @@ body {
 }
 
 .rotating {
-    max-width: 100%;
+    max-width: 75%;
 }
 
 /* ------------------About-------------- */
@@ -332,8 +332,8 @@ body {
     padding-right: 9%;
 }
 #Services {
-    padding-left: 9%;
-    padding-right: 9%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .redtext{
     color: #fa183a;
@@ -497,13 +497,22 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 1rem;
-    min-height: 500px;
+    min-height: 450px;
+}
+#aiboximg{
+    max-width: 90% !important;
+}
+.ai-heading{
+    padding-top: 52px;
 }
 
 .service-cards h1 {
     font-family: 'NEUEMACHINAREGULAR';
     font-size: 30px;
-    padding-left: 16px;
+    padding-left: 10px;
+}
+.serviceimgparent{
+    text-align: center;
 }
 
 .service-cards p {
@@ -511,9 +520,9 @@ iframe {
     text-align: justify;
     color: #909090;
     font-size: 12px !important;
-    width: 90%;
+    width: 95%;
     letter-spacing: 0.4px;
-    padding-left: 16px;
+    padding-left: 10px;
 }
 
 .service-cards ul li {

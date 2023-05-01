@@ -15,55 +15,55 @@ const  Navcomponent = () => {
   const changeHandler = (event) => {
     setFormState({ ...formState, [event.target.name]: event.target.value });
   };
-  const submitHandler = (event) => {
-    event.preventDefault();
-    const config = {
-      SecureToken: "edb30f93-ab79-41df-85e0-06b84121b181",
-      From: `${formState.email}`,
-      To: "companythegame4@gmail.com",
-      Subject: "Email from website",
-      // Body : `${(formState.fname).concat(' ', formState.lname)} connected to you over email`,
-      Body: {
-        Name: `${formState.name}<br/>`,
-        Organization: `${formState.organization}<br/>`,
-        Email: `${formState.email}<br/>`,
-        Subject: `${formState.subject}<br/>`,
-        Phone: `${formState.phone}<br/>`,
-        Message: `${formState.message}<br/>`,
-      },
-    };
-    if (window.Email) {
-      window.Email.send(config).then((response) => {
-        if (response !== "OK") {
-          toast.error("Incorrect Email", {
-            position: "top-right",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        } else {
-          toast.success("🦄Email sent successfully", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
+  //   const config = {
+  //     SecureToken: "edb30f93-ab79-41df-85e0-06b84121b181",
+  //     From: `${formState.email}`,
+  //     To: "companythegame4@gmail.com",
+  //     Subject: "Email from website",
+  //     // Body : `${(formState.fname).concat(' ', formState.lname)} connected to you over email`,
+  //     Body: {
+  //       Name: `${formState.name}<br/>`,
+  //       Organization: `${formState.organization}<br/>`,
+  //       Email: `${formState.email}<br/>`,
+  //       Subject: `${formState.subject}<br/>`,
+  //       Phone: `${formState.phone}<br/>`,
+  //       Message: `${formState.message}<br/>`,
+  //     },
+  //   };
+  //   if (window.Email) {
+  //     window.Email.send(config).then((response) => {
+  //       if (response !== "OK") {
+  //         toast.error("Incorrect Email", {
+  //           position: "top-right",
+  //           autoClose: 4000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //           theme: "colored",
+  //         });
+  //       } else {
+  //         toast.success("🦄Email sent successfully", {
+  //           position: "top-right",
+  //           autoClose: 2000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //           theme: "colored",
+  //         });
 
-          // setTimeout(
-          //     navigate('/')
-          // , 3000);
-        }
-      });
-    }
-  };
+  //         // setTimeout(
+  //         //     navigate('/')
+  //         // , 3000);
+  //       }
+  //     });
+  //   }
+  // };
 
 
 

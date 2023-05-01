@@ -73,12 +73,7 @@ const Landing = () => {
     };
 
     emailjs
-      .sendForm(
-        "service_q483fli",
-        "template_1buterp",
-        event.target,
-        "8fI-sqXJweUI1s17Y"
-      )
+      .sendForm("service_q483fli","template_1buterp",event.target,"8fI-sqXJweUI1s17Y")
       .then((response) => {
         console.log(response.status);
         if (response.status === 200) {
@@ -229,7 +224,7 @@ const Landing = () => {
         <div className="revolvingcircle">
           <img
             src={"./assets/images/revolver.png"}
-            className="rotating"
+            // className="rotating"
             alt="revolve"
           />
           <MdOutlineKeyboardArrowDown className="revolveicon" />
