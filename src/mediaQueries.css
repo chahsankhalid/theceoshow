@@ -1,337 +1,254 @@
 @media only screen and (max-width: 768px) {
-
-    #landingsection {
-        margin-top: 0px;
-    }
-
-    .landingcontent {
-        top: 35%;
-    }
-
-    .aboutcontent {
-        padding-left: 0;
-        width: 100%;
-    }
-
-    .mapcontent li {
-        display: inline-block;
-    }
-
-    .aboutpara {
-        margin-left: 5%;
-    }
-
-    .projectbtn {
-        margin-left: 5%;
-    }
-
-    .navbar-toggler {
-        padding: 0;
-        z-index: 6;
-        transform: rotate(45deg);
-    }
-
-    .navbar-toggler-icon {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-    }
-
-    .iconone, .icontwo, .toggletwoicon, .togglefouricon {
-        transition: 0.4s ease all;
-    }
-
-    .icontwo, .iconfour {
-        margin-left: 6px;
-    }
-
-    .toggletwoicon.active {
-        background: red;
-        border-radius: 50%;
-        width: 25px;
-        height: 25px;
-    }
-
-    .iconone.active {
-        width: 1px;
-        height: 15px;
-        transform: rotate(88deg);
-        border-radius: none;
-        background: white;
-    }
-
-    .icontwo.active {
-        width: 1px;
-        height: 15px;
-        transform: rotate(358deg);
-        border-radius: none;
-        margin-left: -1px !important;
-        background: white;
-    }
-
-    .togglefouricon.active {
-        display: none;
-    }
-
-    body.active {
-        overflow: hidden;
-    }
-
-    .navbar-toggler {
-        border: none;
-        margin-top: 8%;
-    }
-
-    .navul {
-        display: block;
-        margin-top: 10%;
-        padding-left: 0;
-    }
-
-    .navul li {
-        border-bottom: 1px solid grey;
-        line-height: 3rem;
-        padding-left: 0 !important;
-    }
-
-    .getin {
-        left: 6%;
-        bottom: 45%;
-        width: 120px;
-        padding: 5px;
-    }
-
-    .logofooter {
-        width: 20%;
-        margin-bottom: 5%;
-    }
-
-    .footercontent .navbar-brand {
-        margin-left: 0;
-    }
-
-    .logofooter {
-        width: 20%;
-        margin-left: 0;
-        margin-bottom: 5%;
-    }
-
-    .joinbtn {
-        width: 200px;
-        height: 40px
-    }
-
-    .aboutcontent {
-        font-size: 13px;
-    }
-
-    .btn-icon {
-        height: 40px;
-    }
-
-    .landing-list ul li:nth-child(2), .landing-list ul li:nth-child(3) {
-        padding-left: 20px;
-    }
-
-    .copywright {
-        margin-bottom: 20px;
-        padding-left: 0;
-    }
-
-    #pre-loader video {
-        width: auto !important;
-    }
-
-    .service-cards {
-        margin-top: 40px;
-    }
-
-    .glitch {
-        font-size: 12px;
-    }
-
-    .landingheading, .aboutheading {
-        font-size: 23px;
-    }
-
-    .landing-list {
-        right: 15%;
-        bottom: 34%;
-    }
-.revolvingcircle {
-bottom: 15%;
-}
-
-    .navlinkbtn {
-        padding-left: 0 !important;
-    }
-
-    .navbar {
-        padding-right: 5%;
-        padding-left: 0;
-    }
-
-    .navbar-brand {
-        width: 15%;
-        margin-left: 5%;
-        margin-top: 5%;
-    }
-
-    .revolutiontext {
-        display: none;
-    }
-
-    .revolutiontextmob {
-        display: block;
-        color: white;
-        line-height: 0.8;
-        font-family: 'NEUEMACHINAULTRABOLD';
-    }
-
-    .ourmission::before {
-        width: 50px;
-        height: 50px;
-    }
-
-    iframe {
-        border-radius: 0.5rem;
-    }
-
-    .divparent {
-        width: 100%;
-    }
-
-    .maplocation {
-        display: none;
-    }
-
-    iframe {
-        height: 40vh;
-    }
-
-    .moblogbrand {
-        width: 15%;
-        margin-top: 5%;
-    }
-
-    .moblogo {
-        display: block;
-        width: 100%;
-    }
-
-    .mobnavlogo {
-        display: block;
-        margin-top: 14%;
-        opacity: 0.1;
-    }
-
-    .navbar-collapse .nav-item {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        animation-name: fadeInLeft;
-        border-bottom: 1px solid grey;
-    }
-
-    .navbar-collapse.collapsing {
-        left: -100%;
-        transition: height 0s ease;
-    }
-
-    .navbar-collapse.collapsing .navoverlay {
-        left: -100%;
-        transition: height 0s ease;
-    }
-
-    .navbar-collapse.show, .navbar-collapse.show .navoverlay {
-        left: 0;
-        transition: left 300ms ease-in-out;
-    }
-
-    .navbar-toggler.collapsed~.navbar-collapse {
-        transition: left 500ms ease-in-out;
-    }
-
-    .nav-item {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        animation-name: fadeInLeft;
-        border-bottom: 1px solid grey;
-    }
-
-    .toggletwoicon {
-        height: 13px
-    }
-
-    .iconone, .icontwo, .toggletwoicon, .togglefouricon {
-        transition: 0.4s ease all;
-    }
-
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 5;
-        background-color: black;
-    }
-
-    .navbar-collapse .nav-link {
-        font-size: 1.5rem;
-        padding-left: 6%;
-    }
-
-    .navbar-collapse .nav-item {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        animation-name: fadeInLeft;
-        border-bottom: 1px solid grey;
-    }
-
-    .navbar-collapse.collapsing {
-        left: -100%;
-        transition: height 0s ease;
-    }
-
-    .navbar-collapse.collapsing .navoverlay {
-        left: -100%;
-        transition: height 0s ease;
-    }
-
-    .navbar-collapse.show, .navbar-collapse.show .navoverlay {
-        left: 0;
-        transition: left 300ms ease-in-out;
-    }
-
-    .navbar-toggler.collapsed~.navbar-collapse {
-        transition: left 500ms ease-in-out;
-    }
-
-
-    .nav-tabs .nav-link {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        font-size: 15px !important;
-    }
-
-
-    .back-to-top {
-        width: 50px;
-        height: 50px;
-    }
-
-    .scrollbtnp {
-        font-size: 20px;
-    }
-    .projectcard{
-        margin-bottom: 70px;
-    }
-    .service-cards{
-        height: auto;
-    }
-    #ABOUT-us {
-        padding: 10% 2% 10% 2%;
-    }
+  .glow-text-loading {
+    font-size: 50px;
+  }
+  #landingsection {
+    height: 50vh;
+    margin-top: 0;
+  }
+  #landingsection .container-fluid {
+    height: auto;
+  }
+  .landingcontent-parent p {
+    font-size: 13px;
+  }
+  .landing-content {
+    margin-top: 30px;
+  }
+  .revolvingcircle img {
+    width: 100px;
+  }
+  .revolveicon {
+    font-size: 80px;
+  }
+  .revolvingcircle {
+    margin-top: 50px;
+  }
+  .underline-svg {
+    width: 90%;
+  }
+  .saima-img {
+    margin-top: 50px;
+  }
+  .landing-content {
+    margin-top: 50px;
+  }
+  .aboutusimg {
+    margin-left: auto;
+    display: flex;
+  }
+
+  .podcast-message {
+    margin-left: initial;
+    width: 50%;
+  }
+  .glow-text {
+    font-size: 80px;
+  }
+  .podcast-leftparentbox {
+    margin-left: 2%;
+  }
+  .podcast-detail h2 {
+    line-height: 20px;
+    font-size: 20px;
+  }
+  .podcast-detail p {
+    font-size: 14px;
+  }
+  .podcast-rightparentbox {
+    margin-left: 10%;
+  }
+  .moblogbrand {
+    display: block;
+  }
+  .back-video {
+    width: 10%;
+  }
+  .waves {
+    right: -10px;
+  }
+  .mic {
+    width: 25%;
+    margin-left: -15px;
+  }
+  .about-img {
+    margin-top: 0px;
+  }
+  .mobilenav-img {
+    display: block;
+  }
+  .mic-mob {
+    width: 80%;
+    transform: rotate(45deg);
+    opacity: 0.1;
+  }
+  .navbar-toggler {
+    padding: 0;
+    z-index: 6;
+  }
+
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #abe443;
+  }
+
+  .iconone,
+  .icontwo,
+  .togglefouricon {
+    transition: 0.4s ease all;
+  }
+
+  .icontwo,
+  .iconfour {
+    margin-left: 6px;
+  }
+
+  .navul {
+    display: block;
+    margin-top: 10%;
+    padding-left: 0;
+  }
+
+  .navul li {
+    line-height: 3rem;
+    padding-left: 0 !important;
+  }
+
+  .moblogbrand {
+    width: 15%;
+    margin-top: 5%;
+  }
+
+  .moblogo {
+    display: block;
+    width: 100%;
+    margin-left: 23px;
+  }
+
+  .mobnavlogo {
+    display: block;
+    margin-top: 14%;
+    opacity: 0.1;
+  }
+
+  .navbar-collapse .nav-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation-name: fadeInLeft;
+    border-bottom: 1px solid grey;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -100%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.collapsing .navoverlay {
+    left: -100%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show,
+  .navbar-collapse.show .navoverlay {
+    background: #141214;
+    left: 0;
+    transition: left 300ms ease-in;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in;
+  }
+
+  .nav-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation-name: fadeInLeft;
+    border-bottom: 1px solid grey;
+  }
+
+  .toggletwoicon {
+    height: 13px;
+  }
+
+  .iconone,
+  .icontwo,
+  .toggletwoicon,
+  .togglefouricon {
+    transition: 0.4s ease all;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: black;
+  }
+
+  .navbar-collapse .nav-link {
+    font-size: 2rem;
+    padding-left: 6%;
+  }
+
+  .navbar-collapse .nav-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation-name: fadeInLeft;
+    border-bottom: 1px solid grey;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -100%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.collapsing .navoverlay {
+    left: -100%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show,
+  .navbar-collapse.show .navoverlay {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+
+  .nav-tabs .nav-link {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 15px !important;
+  }
+
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+  }
+  .marquee span,
+  .commnity {
+    font-size: 80px;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .mt-50 {
+    margin-top: 50px;
+  }
+  .row-mobile{
+    display: flex;
+  }
+  .row-desktop{
+    display: none;
+  }
+  .footerlogo-mob{
+    width: 30%;
+  }
 }

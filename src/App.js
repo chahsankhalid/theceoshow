@@ -5,12 +5,9 @@ import { Route, Routes,useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
-import Email from './components/email';
 import { AnimatePresence } from 'framer-motion';
 import jQuery from 'jquery';
-import { Privacy } from './components/privacy';
 MouseFollower.registerGSAP(gsap);
-
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -19,24 +16,23 @@ function App() {
   
   const cursor = new MouseFollower();
   useEffect(() => {
-    const elements1 = document.querySelectorAll('.card-img-top');
-    elements1.forEach(element => {
-      element.addEventListener('mouseenter', () => {
-        cursor.setText('');
+    const elements2 = document.querySelectorAll(".podcastimages");
+    elements2.forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        cursor.setImg('./assets/images/mouse.png')
       });
-      element.addEventListener('mouseleave', () => {
-        cursor.removeText();
+      element.addEventListener("mouseleave", () => {
+        cursor.removeImg();
       });
     });
-  })
+  },[])
   if (spinner) {
     jQuery(document).ready(function() {
       setTimeout(() => {
         jQuery(spinner).slideUp(1000);
-       }, 3000)
+       }, 4000)
       setLoading(true)
-  });
-   
+  }); 
 }
 
 
@@ -49,8 +45,6 @@ function App() {
         {/* <Routes> */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Email />} />
-          <Route path="/privacy&policy" element={<Privacy />} />
           {/* </AnimatePresence> */}
         </Routes>
     </AnimatePresence>

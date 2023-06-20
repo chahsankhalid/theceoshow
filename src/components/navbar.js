@@ -1,130 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { BsArrowRight } from "react-icons/bs";
-import Modal from "react-bootstrap/Modal";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { HashLink as Link } from "react-router-hash-link";
-import emailjs from 'emailjs-com';
-import axios from 'axios';
 import $ from "jquery";
 
-const  Navcomponent = () => {
-  const [lgShow, setLgShow] = useState(false);
-  const [formState, setFormState] = useState({});
-  const changeHandler = (event) => {
-    setFormState({ ...formState, [event.target.name]: event.target.value });
-  };
-  // const submitHandler = (event) => {
-  //   event.preventDefault();
-  //   const config = {
-  //     SecureToken: "edb30f93-ab79-41df-85e0-06b84121b181",
-  //     From: `${formState.email}`,
-  //     To: "companythegame4@gmail.com",
-  //     Subject: "Email from website",
-  //     // Body : `${(formState.fname).concat(' ', formState.lname)} connected to you over email`,
-  //     Body: {
-  //       Name: `${formState.name}<br/>`,
-  //       Organization: `${formState.organization}<br/>`,
-  //       Email: `${formState.email}<br/>`,
-  //       Subject: `${formState.subject}<br/>`,
-  //       Phone: `${formState.phone}<br/>`,
-  //       Message: `${formState.message}<br/>`,
-  //     },
-  //   };
-  //   if (window.Email) {
-  //     window.Email.send(config).then((response) => {
-  //       if (response !== "OK") {
-  //         toast.error("Incorrect Email", {
-  //           position: "top-right",
-  //           autoClose: 4000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //           theme: "colored",
-  //         });
-  //       } else {
-  //         toast.success("🦄Email sent successfully", {
-  //           position: "top-right",
-  //           autoClose: 2000,
-  //           hideProgressBar: false,
-  //           closeOnClick: true,
-  //           pauseOnHover: true,
-  //           draggable: true,
-  //           progress: undefined,
-  //           theme: "colored",
-  //         });
-
-  //         // setTimeout(
-  //         //     navigate('/')
-  //         // , 3000);
-  //       }
-  //     });
-  //   }
-  // };
-
-
-
-  const sendEmail = (event) => {
-    event.preventDefault();
-    const data={
-      Name: formState.fname,
-      Organization: formState.organization,
-      Email: formState.email,
-      Subject: formState.subject,
-      Phone: formState.phone,
-      Message: formState.message,
-    }
-
-    emailjs.sendForm('service_36d2l6r','template_u8ggfys',event.target,'8fI-sqXJweUI1s17Y').then(
-      response=>{
-        console.log(response.status)
-        if (response.status === 200) {
-          $('.modal').removeClass('show');
-          $('.modal-backdrop').removeClass('show')
-          toast.success("Email sent successfully", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-
-          axios.post('https://sheet.best/api/sheets/659586f7-fc9d-4be5-9c85-876d03ce86e4',data)
-          .then((response)=>{
-            console.log(response);
-            setFormState('')
-          })
-        } else {
-          toast.error("Incorrect Email", {
-            position: "top-right",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-
-          // setTimeout(
-          //     navigate('/')
-          // , 3000);
-        }
-      }
-    )
-  }
+const Navcomponent = () => {
   const hidenav = () => {
     $("body").removeClass("active");
     document.body.style.overflow = "visible";
     $(".navbar-collapse").removeClass("show");
     $(".toggletwoicon,.iconone,.icontwo,.togglefouricon").removeClass("active");
-    $('.navbar-toggler').removeClass('collapsed')
+    $(".navbar-toggler").removeClass("collapsed");
   };
 
   useEffect(() => {
@@ -171,36 +57,6 @@ const  Navcomponent = () => {
                 />
               </Navbar.Brand>
               <ul className="navul">
-                {/* <li>
-                  <Link
-                    onClick={hidenav}
-                    className="nav-link"
-                    smooth={true}
-                    to="#cardsrow"
-                  >
-                    NEWS
-                  </Link>
-                </li> */}
-                {/* <li>
-                  <Link
-                    onClick={hidenav}
-                    className="nav-link"
-                    smooth={true}
-                    to="#Service"
-                  >
-                    CAREER
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    onClick={hidenav}
-                    className="nav-link"
-                    smooth={true}
-                    to="#clients"
-                  >
-                    PARTNERS
-                  </Link>
-                </li> */}
                 <li>
                   <Link
                     onClick={hidenav}
@@ -208,7 +64,17 @@ const  Navcomponent = () => {
                     smooth={true}
                     to="/"
                   >
-                    HOME
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={hidenav}
+                    className="nav-link"
+                    smooth={true}
+                    to="#ABOUT-US"
+                  >
+                    About Us
                   </Link>
                 </li>
                 <li>
@@ -218,7 +84,7 @@ const  Navcomponent = () => {
                     smooth={true}
                     to="#About"
                   >
-                    ABOUT
+                    Digital Marketing
                   </Link>
                 </li>
                 <li>
@@ -226,13 +92,23 @@ const  Navcomponent = () => {
                     onClick={hidenav}
                     className="nav-link"
                     smooth={true}
+                    to="#Podcast"
+                  >
+                    Podcasts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={hidenav}
+                    className="nav-link contact-usbtn"
+                    smooth={true}
                     to="#map"
                   >
-                    CONTACT US
+                    Contact Us
                   </Link>
                 </li>
               </ul>
-              <Button
+              {/* <Button
                 variant="outline-primary"
                 onClick={() => setLgShow(true)}
                 className="getin"
@@ -243,9 +119,9 @@ const  Navcomponent = () => {
                 src={"./assets/images/Mark.png"}
                 className="mobnavlogo"
                 alt="logo"
-              />
+              /> */}
             </Nav>
-            <Modal
+            {/* <Modal
               size="lg"
               show={lgShow}
               onHide={() => setLgShow(false)}
@@ -333,7 +209,15 @@ const  Navcomponent = () => {
                   </button>
                 </form>
               </Modal.Body>
-            </Modal>
+            </Modal> */}
+            <div className="mobilenav-img">
+              <video autoPlay loop muted playsInline className="mic-mob">
+                <source
+                  src={process.env.PUBLIC_URL + "/assets/videos/Mic.mp4"}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
